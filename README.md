@@ -1,6 +1,6 @@
 ## Sample App for Vert.x
 
-This is a sample app using request routing from [Usergrid](http://git.io/usergrid). It demonstrates how you would build a dispatcher and an authentication mechanism (currently just stubbed out) using vert.x's built-in http server.
+This is a sample app using request routing from [Usergrid](http://git.io/usergrid). It demonstrates how you would build a dispatcher and an authentication mechanism (currently just stubbed out) using [vert.x](http://vertx.io)'s built-in http server.
 
 You must have the vert.x binary installed in order for this to work. see <http://vertx.io/install.html> for details. 
 
@@ -26,7 +26,9 @@ What happens when you throw an uncaught exception from a handler:
 
 - <http://localhost:8080/exception>
 
-Overall this is a very intriguing framework with a bunch of potential and given it's building blocks (Netty and Hazelcast) could be used in a production scenario right now. However, after playing with this for a day, here are some things I'm *not* psyched about:
+Poke around the source. There are a lot of notes via in-line and javadoc comments on my thoughts about how things would be built out (some of it specific to Usergrid, but most fairly general).
+
+Overall this is a very intriguing framework with a bunch of potential and given its building blocks (Netty and Hazelcast) could be used in a production scenario right now as there is not very much code. However, after playing with this for a day, here are some things I'm *not* psyched about:
 
 - I don't like anonymous inner classes and not doing such makes it difficult to get at vert.x configuration and context information
 - Mocking connection plumbing is very difficult
